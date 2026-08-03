@@ -107,6 +107,8 @@ app.use((err,req,res,next) => {
 })   // error handling middleware from line 62 to 70 .
 
 
-app.listen(8080, () => {
-    console.log("app is listening on port 8080");
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
+    console.log(`App is listening on port ${PORT}`);
 });
