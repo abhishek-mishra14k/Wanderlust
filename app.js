@@ -5,6 +5,9 @@ if (process.env.NODE_ENV !== "production") {
 
 const express = require("express");
 const app = express();
+app.get("/test", (req, res) => {
+    res.send("TEST ROUTE WORKS");
+});
 const mongoose = require("mongoose");
 const path = require("path");
 const methodOverride = require("method-override");
