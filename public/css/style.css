@@ -1,0 +1,187 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container{
+    flex: 1;
+}
+
+.navbar {
+    background-color: white;
+}
+
+.fa-location-arrow {
+    color :#fe424d;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color : #222222 !important;
+}
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a :hover{
+    text-decoration: underline;
+}
+
+.f-info-links ,
+.f-info-social ,
+.f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+        justify-content: center;
+}
+
+.f-info-social{
+    margin-right: 1 rem;
+    font-size: 1.2rem;
+}
+
+
+.f-info{
+    text-align: center;
+    display: flex;
+    height: 8rem;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/* cards */
+
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+    
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+
+.card-body {
+    padding:0 !important;
+}
+
+.card-text p {
+    font-weight: 400;
+    
+}
+
+.listing-link{
+    text-decoration: none;
+}
+
+/* card effect */
+
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+    opacity: 1;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.listing-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    opacity: 0.8;
+}
+
+/* new page */
+
+.add-btn {
+    background-color: #fe424d !important ;
+    border: none !important;
+}
+
+/* edit page */
+
+.edit-btn {
+    background-color: #fe424d !important ;
+    border: none !important;
+}
+
+/* show page  */
+
+.show-img{
+    height: 40vh;
+}
+
+.btns{
+    display: flex;
+}
+
+show-cards{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+#map {
+    height: 300px;
+    width: 90vh;
+}
+
+/* price styling */
+
+.listing-price{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.night-text{
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+.search-form{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media (max-width:768px){
+
+    .search-form{
+        flex-direction: column;
+        width: 100%;
+    }
+    .search-input{
+        width: 100%;
+        margin: 0 !important;
+        padding: 0.6rem 1rem;
+    }
+
+    .btn-search{
+        width: 100%;
+    }
+
+    .container{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .navbar-nav{
+        text-align: center;
+    }
+
+}
+
+/* reduce size of button */
+.search-input,
+.btn-search{
+    height: 42px;
+}
