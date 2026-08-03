@@ -1,145 +1,97 @@
 <div align="center">
 
-# 🌍 WanderLust
+# 🌍 Wanderlust
 
-### A Full-Stack Airbnb Clone built using Node.js, Express.js, MongoDB Atlas & Cloudinary
+### A Full-Stack Airbnb-Inspired Travel Listing Platform
 
-Discover, create, review, and manage beautiful travel listings with secure authentication and cloud image storage.
+Discover, create, edit, review, and manage travel accommodations with secure authentication, image uploads, and cloud-based storage.
+
+<br>
+
+### 🚀 Live Demo
+
+🔗 https://wanderlust-qdf2.onrender.com/listings
 
 </div>
 
 ---
 
-## 📌 Features
+## 📸 Preview
 
-### 🏡 Listings
-- Create new property listings
-- Edit existing listings
-- Delete listings
-- View complete listing details
-- Upload listing images using Cloudinary
-- Store listing location with GeoJSON coordinates
+> Add screenshots or a GIF here
 
-### 🔍 Search & Categories
-- Search listings by:
-  - Title
-  - Location
-  - Country
-- Browse listings by category
-  - Beaches
-  - Mountains
-  - Castles
-  - Camping
-  - Trending
-  - Iconic Cities
-  - Farms
-  - Rooms
+| Home Page | Listing Details |
+|-----------|-----------------|
+| ![Home](screenshots/home.png) | ![Details](screenshots/show.png) |
 
-### 👤 Authentication
-- User Registration
-- User Login
-- User Logout
-- Password hashing using Passport Local Mongoose
-- Session-based Authentication
-- Protected Routes
+---
 
-### ⭐ Reviews
-- Add Reviews
-- Delete Reviews
-- Rating System
-- Only Review Author can delete review
+# ✨ Features
 
-### 🔐 Authorization
-- Only logged-in users can:
-  - Create Listings
-  - Add Reviews
-- Only Listing Owner can:
-  - Edit Listing
-  - Delete Listing
-- Only Review Author can:
-  - Delete Review
-
-### ☁ Cloud Storage
-- Cloudinary Image Upload
-- Multer Image Handling
-
-### 🗺 Maps & Location
-- Geoapify Geocoding API
-- Stores Latitude & Longitude
-- GeoJSON Support
-
-### 💬 Flash Messages
-- Success Notifications
-- Error Notifications
-
-### 📱 Responsive UI
-- Bootstrap 5
-- Mobile Friendly Design
+- 🔐 User Authentication (Sign Up / Login / Logout)
+- 🏡 Create, Edit & Delete Listings
+- 📸 Image Upload using Cloudinary
+- ⭐ Add & Delete Reviews
+- 👤 Ownership Authorization
+- 🔍 Search Listings
+- 🗂 Category Filtering
+- 🌍 MongoDB Atlas Database
+- ☁️ Fully Deployed on Render
+- 📱 Responsive UI
 
 ---
 
 # 🛠 Tech Stack
 
-## Frontend
+### Frontend
 
 - HTML5
 - CSS3
 - Bootstrap 5
-- JavaScript
 - EJS
-- EJS Mate
+- JavaScript
 
-## Backend
+### Backend
 
 - Node.js
 - Express.js
 
-## Database
+### Database
 
 - MongoDB Atlas
 - Mongoose
 
-## Authentication
+### Authentication
 
 - Passport.js
 - Passport Local
-- Passport Local Mongoose
 - Express Session
 - Connect Mongo
 
-## Image Storage
+### Cloud
 
 - Cloudinary
 - Multer
-- Multer Storage Cloudinary
-
-## APIs
-
-- Geoapify Geocoding API
+- Render
 
 ---
 
-# 📂 Project Structure
+# 📂 Folder Structure
 
 ```
-Wanderlust
+Wanderlust/
 │
 ├── controllers/
 ├── init/
+├── middleware.js
 ├── models/
 ├── public/
-│   ├── css/
-│   ├── js/
-│   └── images/
-│
 ├── routes/
 ├── utils/
 ├── views/
-│
-├── middleware.js
-├── schema.js
-├── cloudConfig.js
 ├── app.js
+├── cloudConfig.js
+├── schema.js
 ├── package.json
 └── README.md
 ```
@@ -151,18 +103,10 @@ Wanderlust
 ### Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Wanderlust.git
-```
+git clone https://github.com/abhishek-mishra14k/Wanderlust.git
 
----
-
-### Move into Project
-
-```bash
 cd Wanderlust
 ```
-
----
 
 ### Install Dependencies
 
@@ -170,123 +114,55 @@ cd Wanderlust
 npm install
 ```
 
----
-
-### Create .env File
+### Create .env
 
 ```env
-MONGO_URL=YOUR_MONGODB_ATLAS_URI
+MONGO_URL=your_mongodb_connection_string
 
-CLOUD_NAME=YOUR_CLOUDINARY_NAME
-CLOUD_API_KEY=YOUR_CLOUDINARY_KEY
-CLOUD_API_SECRET=YOUR_CLOUDINARY_SECRET
+SECRET=your_secret_key
 
-GEOAPIFY_API_KEY=YOUR_GEOAPIFY_KEY
+CLOUD_NAME=your_cloud_name
 
-SECRET=YOUR_SESSION_SECRET
+CLOUD_API_KEY=your_cloud_api_key
+
+CLOUD_API_SECRET=your_cloud_api_secret
+
+GEOAPIFY_API_KEY=your_geoapify_api_key
 ```
 
----
-
-### Seed Database
+### Run
 
 ```bash
-node init/index.js
+node app.js
+```
+
+Visit
+
+```
+http://localhost:8080/listings
 ```
 
 ---
 
-### Start Server
+# 🌐 Live Demo
 
-```bash
-nodemon app.js
-```
+### 🚀 Deployed Application
 
----
-
-Open
-
-```
-http://localhost:8080
-```
+https://wanderlust-qdf2.onrender.com/listings
 
 ---
 
-# 📸 Screenshots
+# 📚 What I Learned
 
-## Home Page
-
-_Add Screenshot Here_
-
----
-
-## Listing Details
-
-_Add Screenshot Here_
-
----
-
-## Create Listing
-
-_Add Screenshot Here_
-
----
-
-## Login
-
-_Add Screenshot Here_
-
----
-
-## Map & Reviews
-
-_Add Screenshot Here_
-
----
-
-# 📦 NPM Packages Used
-
-- express
-- mongoose
-- ejs
-- ejs-mate
-- express-session
-- connect-mongo
-- passport
-- passport-local
-- passport-local-mongoose
-- multer
-- cloudinary
-- multer-storage-cloudinary
-- joi
-- connect-flash
-- method-override
-- dotenv
-
----
-
-# 🔒 Security Features
-
-- Password Hashing
-- Session Authentication
-- MongoDB Session Store
-- Protected Routes
-- Owner Authorization
-- Review Authorization
-- Environment Variables
-
----
-
-# 🌟 Future Improvements
-
-- ❤️ Wishlist Feature
-- 📍 Interactive Maps
-- 💳 Online Payment Integration
-- 📅 Booking System
-- 💬 Chat Between Users
-- 🔔 Notifications
-- 📱 Progressive Web App (PWA)
-- 🌙 Dark Mode
+- MVC Architecture
+- RESTful Routing
+- Authentication with Passport.js
+- Session Management
+- MongoDB Atlas
+- Cloudinary Image Storage
+- Deployment on Render
+- Git & GitHub Workflow
+- Server-side Validation with Joi
 
 ---
 
@@ -294,11 +170,14 @@ _Add Screenshot Here_
 
 **Abhishek Mishra**
 
-GitHub: https://github.com/YOUR_USERNAME
+GitHub:
+https://github.com/abhishek-mishra14k
 
-LinkedIn: https://linkedin.com/in/YOUR_LINKEDIN
+LinkedIn:
+(Add your LinkedIn URL)
 
 ---
 
-## ⭐ If you like this project, don't forget to star the repository!
+## ⭐ If you like this project
 
+Give this repository a ⭐ on GitHub.
