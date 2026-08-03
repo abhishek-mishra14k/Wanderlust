@@ -186,25 +186,3 @@ show-cards{
     height: 42px;
 }
 
-
-
-.hero-section{
-    min-height:70vh;
-}
-
-.display-3{
-    font-weight:700;
-}
-
-.lead{
-    font-size:1.25rem;
-}
-
-.fa-solid{
-    color:#ff385c;
-}
-
-.btn-dark{
-    padding:12px 30px;
-    border-radius:30px;
-}
