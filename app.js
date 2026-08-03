@@ -67,9 +67,6 @@ const sessionOptions = {
     },
 };
 
-// app.get("/", (req, res) => {
-//     res.send("server is working");
-// })
 
 app.use(session(sessionOptions));
 app.use(flash());
@@ -91,6 +88,9 @@ app.use((req, res, next) => {
     next();
 });
 
+app.get("/", (req, res) => {
+res.render("home");
+});
 
 app.use("/listings", listingsRouter); // this is used to use the routes defined in the listing.js file
 app.use("/listings/:id/reviews", reviewsRouter); // this is used to use the routes defined in the review.js file
